@@ -2,7 +2,7 @@
     "name": "micro-miniz",
     "version": "1.0.0",
     "description": "An encapsulation around the mini-z library.",
-    "keywords": "zlib compressing decompressing inflate deflate",
+    "keywords": "miniz gzip zlib compressing decompressing inflate deflate",
     "repository": {
         "type": "git",
         "url": "https://github.com/rzeldent/micro-miniz"
