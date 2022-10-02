@@ -10,19 +10,20 @@ void setup()
     // Compress the data
     mz_ulong compressed_len = mz_compressBound(original_length);
     auto compressed_data = new byte[compressed_len];
-    if (compress(compressed_data, &compressed_len, (unsigned char*)original_data, original_length) =! MZ_OK)
+    if (compress(compressed_data, &compressed_len, (unsigned char *)original_data, original_length) != MZ_OK)
         abort();
 
     // Uncompress
     auto uncompressed_data = new byte[original_length]; // Note buffer can/should be larger!
-    mz_ulong uncompressed_len = uncompressed_length if (uncompress(uncompressed_data, &uncompressed_len, compressed_data, compressed_len) != MZ_OK)
+    mz_ulong uncompressed_len = original_length;
+    if (uncompress(uncompressed_data, &uncompressed_len, compressed_data, compressed_len) != MZ_OK)
         abort();
 
-    if (strcmp(original_data, (const char*)uncompressed_data) != 0)
+    if (strcmp(original_data, (const char *)uncompressed_data) != 0)
         abort();
 
-    delete []uncompressed_data;
-    delete  []compressed_data;
+    delete[] uncompressed_data;
+    delete[] compressed_data;
 }
 
 void loop()
