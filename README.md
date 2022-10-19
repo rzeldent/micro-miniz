@@ -1,6 +1,6 @@
 # micro-miniz
 
-![CI-Badge](https://github.com/rzeldent/micro-miniz/actions/workflows/main.yml/badge.svg?event=push)
+[![Platform IO CI](https://github.com/rzeldent/micro-miniz/actions/workflows/main.yml/badge.svg)](https://github.com/rzeldent/micro-miniz/actions/workflows/main.yml)
 
 Library for encoding and decoding gzip
 
